@@ -16,8 +16,6 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        $config = $this->getServiceLocator()->get('Config');
-        \Zend\Debug\Debug::dump($config['service_manager']);
         return new ViewModel();
     }
 }
