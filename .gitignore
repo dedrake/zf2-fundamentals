@@ -8,4 +8,6 @@ nbproject
 .settings
 composer.lock
 */vendor/bin
+onlinemarket.start
+zf2guestbook
 
