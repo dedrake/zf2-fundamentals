@@ -1,3 +1,12 @@
 <strong>Module:</strong>        Market &raquo;
 <strong>Controller:</strong>    Skeleton &raquo;
 <strong>Action:</strong>        index
+<?php if($this->messages) : ?>
+    <ul>
+        <?php foreach($this->messages as $message) : ?>
+            <li>
+                <?php echo $message; ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>

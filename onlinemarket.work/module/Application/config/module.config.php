@@ -10,10 +10,10 @@
 return array(
     'router' => array(
         'routes' => array(
-            'home' => array(
+            'application-home' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/',
+                    'route'    => '/app-home',
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
                         'action'     => 'index',
