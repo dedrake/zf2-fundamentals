@@ -14,7 +14,7 @@ class ViewController extends AbstractActionController
 
     public function itemAction()
     {
-        $category = $this->params()->fromQuery('category');
+        $category = $this->params()->fromRoute('category');
         if(!$category){
             $this->flashMessenger()->addMessage('Item Not Found');
             return $this->redirect()->toRoute('market');
