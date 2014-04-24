@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <?php echo $this->headTitle('ZF2 '. $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
+        <?php echo $this->headTitle('ZF2 '. $this->translate('Online Market'))->setSeparator(' - ')->setAutoEscape(false) ?>
 
         <?php echo $this->headMeta()
             ->appendName('viewport', 'width=device-width, initial-scale=1.0')
@@ -46,11 +46,7 @@
         <div class="container">
             <div class="col-lg-2">
                 <?php if (isset($this->categories) && is_array($this->categories)) : ?>
-                    <ul>
-                        <?php foreach ($this->categories as $category) : ?>
-                            <li><?php echo $category; ?></li>
-                        <?php endforeach; ?>
-                    </ul>
+                    <?php echo $this->leftLinks($this->categories, $this->basePath() . '/market/view/index'); ?>
                 <?php endif; ?>
             </div>
             <div class="col-lg-8">

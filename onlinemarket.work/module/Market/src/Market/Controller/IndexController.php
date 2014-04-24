@@ -10,16 +10,18 @@
 namespace Market\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
+use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        $messages = array();
+        $messages = array('Welcome to the Online Market');
         if ($this->flashmessenger()->hasMessages()){
             $messages = $this->flashmessenger()->getMessages();
         }
-        return array('messages' => $messages);
+        $viewModel = new ViewModel(array('messages' => $messages));
+        return $viewModel;
     }
 
     public function fooAction()
