@@ -119,4 +119,9 @@ return array(
             ),
         ),
     ),
+    'view_helpers' => array(
+        'invokables' => array(
+            'leftLinks' => 'Application\Helper\LeftLinks',
+        ),
+    ),
 );
